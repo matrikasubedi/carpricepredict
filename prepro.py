@@ -5,7 +5,7 @@ import streamlit as st
 #Load the dataset
 @st.cache_data()
 def load_data():
-    df = pd.read_csv("/Users/matrikasubedi/AIclass/carpricepredict/data/car-prices.csv")
+    df = pd.read_csv("data/car-prices.csv")
     # Extract the name of the car manufactures
     car_companies = pd.Series([car.split(" ")[0] for car in df['CarName']],index=df.index)
 
